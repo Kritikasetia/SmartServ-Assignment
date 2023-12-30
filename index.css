@@ -1,0 +1,62 @@
+:root {
+	--main-bg-color: rgb(30, 32, 34);
+	--highlight-color: #34db7c;
+	--button-hover-color: #5b9572;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: rgb(56, 62, 63);
+}
+
+#task-container {
+	text-align: center;
+	background-color: var(--main-bg-color);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+	color: var(--highlight-color);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.task-item {
+	display: inline-block;
+	margin: 10px;
+}
+
+.task-item button {
+	background-color: transparent;
+	border: 2px solid var(--highlight-color);
+	color: var(--highlight-color);
+	padding: 15px;
+	border-radius: 8px;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+}
+
+.task-item button:hover {
+	background-color: var(--button-hover-color);
+	color: #ffffff;
+}
+
+button {
+	border: none;
+	outline: none;
+	font-size: inherit;
+	font-family: inherit;
+}
