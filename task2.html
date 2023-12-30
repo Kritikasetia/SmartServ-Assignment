@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2.css">
+    <title>Product Display App</title>
+</head>
+<body>
+    <div id="import-screen">
+        <div id="file-upload-section">
+            <h1>Import Products</h1>
+            <label for="fileType">Choose File Type:</label>
+            <select id="fileType">
+                <option value="json">JSON</option>
+                <option value="csv">CSV</option>
+            </select>
+            <label for="inputFile">Choose File:</label>
+            <input type="file" id="inputFile" accept=".json, .csv">
+            <button onclick="captureFileDetails()">Next</button>
+        </div>
+        <div id="file-details-section" style="display:none;">
+            <h2>File Details</h2>
+            <label for="charEncoding">Character Encoding:</label>
+            <select id="charEncoding">
+                <option value="utf-8">UTF-8</option>
+                <option value="utf-16">UTF-16</option>
+            </select>
+            <!-- Display delimiter only for CSV -->
+            <label for="delimiter" id="delimiterLabel" style="display:none;">Delimiter:</label>
+            <input type="text" id="delimiter" placeholder="e.g., ," style="display:none;">
+            <button onclick="importData()">Import Data</button>
+        </div>
+        <div id="display-options">
+            <div class="field-select">
+                Available Field
+                <br>
+                <select id="availableFields" multiple></select>
+            </div>
+            <div id="buttons">
+                <button onclick="addSelectedFields()"> >> </button>
+                <br>
+                <button onclick="removeSelectedFields()"> << </button>
+            </div>
+            <div class="field-select">
+                Display Field
+                <br>
+                <select id="displayFields" multiple></select>
+            </div>
+            <button onclick="showSelectedData()">Next</button>
+        </div>
+        <table id="productTable">
+            <!-- Table data will be displayed here -->
+        </table>
+    </div>
+    <script src="task2.js"></script>
+</body>
+</html>
