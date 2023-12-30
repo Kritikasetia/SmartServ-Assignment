@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title> <!-- Include Chart.js library -->
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Company Metrics</h1>
+    <div class="row">
+        <div class="rectangle" id="totalRevenue">
+            <h3>Total Revenue</h3>
+            <p>$500,000</p>
+        </div>
+        <div class="rectangle" id="totalJobAvg">
+            <h3>Total Job Avg</h3>
+            <p>$1,200</p>
+        </div>
+        <div class="rectangle" id="ticketsCreated">
+            <h3>Tickets Created</h3>
+            <p>150</p>
+        </div>
+        <div class="rectangle" id="ticketsScheduled">
+            <h3>Tickets Scheduled</h3>
+            <p>120</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="rectangle" id="outstandingAmount">
+            <h3>Outstanding Amount</h3>
+            <p>$50,000</p>
+        </div>
+        <div class="rectangle" id="membershipSold">
+            <h3>Membership Sold</h3>
+            <p>30</p>
+        </div>
+        <div class="rectangle" id="jobCompleted">
+            <h3>Job Completed</h3>
+            <p>100</p>
+        </div>
+        <div class="rectangle" id="ticketCancel">
+            <h3>Ticket Cancel</h3>
+            <p>10</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="rectangle" id="revenueByLocation">
+            <h3>Revenue by Job Location</h3> <canvas id="revenueByLocationChart" width="400" height="200"></canvas>
+        </div>
+        <div class="rectangle" id="revenueByType">
+            <h3>Revenue by Job Type</h3> <canvas id="revenueByTypeChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
